@@ -1,0 +1,9 @@
+{
+  "rewrites": [{ "source": "/ref/:path*", "destination": "/ref.html" }],
+  "headers": [
+    {
+      "source": "/ref.html",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    }
+  ]
+}
