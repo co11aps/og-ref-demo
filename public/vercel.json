@@ -1,8 +1,30 @@
 {
-  "rewrites": [{ "source": "/ref/:path*", "destination": "/ref.html" }],
+  "rewrites": [
+    { "source": "/ref/:path*", "destination": "/ref.html" },
+    {
+      "source": "/((?!.*\\.(?:js|css|png|jpg|jpeg|gif|svg|webp|ico|txt)).*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
+      "source": "/index.html",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    },
+    {
+      "source": "/",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    },
+    {
       "source": "/ref.html",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    },
+    {
+      "source": "/og-main.png",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    },
+    {
+      "source": "/og-image.png",
       "headers": [{ "key": "Cache-Control", "value": "no-store" }]
     }
   ]
