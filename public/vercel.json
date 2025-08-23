@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/ref/:path*", "destination": "/ref.html" },
     {
       "source": "/((?!.*\\.(?:js|css|png|jpg|jpeg|gif|svg|webp|ico|txt)).*)",
       "destination": "/index.html"
@@ -16,15 +15,7 @@
       "headers": [{ "key": "Cache-Control", "value": "no-store" }]
     },
     {
-      "source": "/ref.html",
-      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
-    },
-    {
-      "source": "/og-main.png",
-      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
-    },
-    {
-      "source": "/og-image.png",
+      "source": "/og-image-600x600.png",
       "headers": [{ "key": "Cache-Control", "value": "no-store" }]
     }
   ]
